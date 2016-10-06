@@ -1,0 +1,24 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "npm install json-server npm install json-lite",
+  "main": "file.js",
+  "dependencies": {
+    "json-server": "^0.8.22",
+    "lite-server": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jch71/workshop_angular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jch71/workshop_angular/issues"
+  },
+  "homepage": "https://github.com/Jch71/workshop_angular#readme"
+}
