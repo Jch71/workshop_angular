@@ -1,0 +1,19 @@
+<script>
+function User(name){
+	/*return{
+		name:name
+	};
+     N'est pas un constructeur !
+*/
+	this.name = name;
+}
+
+User.prototype.greet = function() {
+	console.log("hello "+ this.name)
+};
+//var u = User('bill')
+// Crée un object, mais ce n'est pas un construteur
+
+var u = new User('bob');
+
+</script>

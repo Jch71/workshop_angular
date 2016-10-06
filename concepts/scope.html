@@ -1,0 +1,36 @@
+<script>
+var a, b, c;
+foo();
+
+function foo(a) {
+    bar()
+
+    function bar() {
+        var b = 10;
+        baz();
+
+        function baz() {
+            var c = 20;
+            console.log(a, b, c, d);
+            var d = 30;
+            //undefined 10 20 undefined
+        }
+    }
+}
+
+function foo2(a) {
+    bar()
+
+    function bar2() {
+        var b = 10;
+        baz();
+    }
+}
+
+function baz2() {
+    var c = 20;
+    console.log(a, b, c, d);
+    var d = 30;
+    //undefined undefined 20 undefined
+}
+</script>
