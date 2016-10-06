@@ -1,12 +1,18 @@
-(function(){
+(function() {
 
     var moduleDependencies = [];
-	
-	angular.module('ui.controllers', moduleDependencies )
 
-	.controller('uiCtrl', function ($scope) {
-		
-	})
+    angular.module('ui.controllers', moduleDependencies)
+        .run(function() {
+            console.log('ui.controllers', 'RUN')
+        })
+        .config(function() {
+            console.log('ui.controllers', 'RUN')
+        })
+
+    .controller('uiCtrl', function($scope) {
+
+    })
 
 
 })();

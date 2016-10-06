@@ -62,14 +62,14 @@ gulp.task('watchjs', function() {
 
 gulp.task('bundle', ['clean'], function() {
     return gulp.src(CONFIG.paths.js)
-        .pipe(gulpIgnore.exclude(CONFIG.ignored))
+        //.pipe(gulpIgnore.exclude(CONFIG.ignored))
         .pipe(debug())
         .pipe(sourcemaps.init())
         .pipe(concat('app.bundle.js'))
         //.pipe(uglify())
         //.pipe(ngAnnotate())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./client/lib'))
+        .pipe(gulp.dest('./src/lib'))
         .pipe(size())
         .on('end', function() {
             gutil.log('Done!');
