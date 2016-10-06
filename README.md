@@ -8,6 +8,16 @@ file.js (exemple de nodejs)
 avec json-server -> db json facile
 avec lite-server -> server http 
 
+#Packages Sublime
+AngularJS
+AngularSnippets
+Emmet
+JavaScript Completion
+Terminal
+JS Snippets
+sidebar enhancement
+
+
 # JS principes
 
 Construtor
