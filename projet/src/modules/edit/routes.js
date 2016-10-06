@@ -1,12 +1,12 @@
 (function() {
 
     var moduleDependencies = [];
-    angular.module('shared.routes', moduleDependencies)
+    angular.module('edit.routes', moduleDependencies)
         .run(function() {
-            console.log('shared.routes', 'RUN')
+            console.log('edit.routes', 'RUN')
         })
         .config(function() {
-            console.log('shared.routes', 'RUN')
+            console.log('edit.routes', 'RUN')
         })
 
     .config([configFn]);

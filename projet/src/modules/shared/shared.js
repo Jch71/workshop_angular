@@ -1,15 +1,9 @@
 (function() {
 
-    var moduleDependencies = ['shared.services', 'shared.controllers', 'shared.routes'];
+    var moduleDependencies = ['shared.services', 'shared.validators'];
 
     angular.module('shared', moduleDependencies)
-        .run(function() {
-            console.log('shared.module', 'RUN')
-        })
-        .config(function() {
-            console.log('shared.module', 'RUN')
-        })
-
+       
 
 
 })();

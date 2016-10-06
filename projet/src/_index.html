@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>NgApp
+    </title>
+</head>
+<style>
+img {
+    transition: transform .3s ease;
+}
+
+img.zoom {
+    transform: scale(1.5);
+}
+</style>
+
+<body ng-app="app-wrap" ng-init="message='toto message'">
+    <ui-header></ui-header>
+    <img src="http://robohash.org/bob" ng-class="{zoom:zoomed}" ng-click="zoomed=!zoomed">
+    <img src="http://robohash.org/{{name||'toto'}}" ui-css-zoom>
+    <ui-alert>{{message}}</ui-alert>
+    <br>
+    <ui-button level="0" icon="ok"></ui-button>
+    <ui-button level="1" icon="save"></ui-button>
+    <ui-button level="2" icon="check"></ui-button>
+    <ui-button level="3"></ui-button>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            <form action="" method="POST" role="form">
+                <legend>Form title</legend>
+                <div class="form-group">
+                    <label for="">label</label>
+                    <input type="text" class="form-control" ng-model="name" id="" placeholder="Input field">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="lib/app.bundle.js"></script>
+
+</html>

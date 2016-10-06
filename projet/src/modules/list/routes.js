@@ -1,12 +1,12 @@
 (function() {
 
     var moduleDependencies = [];
-    angular.module('ui.routes', moduleDependencies)
+    angular.module('list.routes', moduleDependencies)
         .run(function() {
-            console.log('ui.routes', 'RUN')
+            console.log('list.routes', 'RUN')
         })
         .config(function() {
-            console.log('ui.routes', 'RUN')
+            console.log('list.routes', 'CONFIG')
         })
 
     .config([configFn]);

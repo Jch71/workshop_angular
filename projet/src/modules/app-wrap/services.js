@@ -7,7 +7,7 @@
             console.log('app-wrap.services', 'RUN')
         })
         .config(function() {
-            console.log('app-wrap.services', 'RUN')
+            console.log('app-wrap.services', 'CONFIG')
         })
 
 })();

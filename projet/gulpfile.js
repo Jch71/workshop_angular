@@ -25,7 +25,7 @@ var CONFIG = {
         baseName: '/module.*',
     },
     paths: {
-        js: ['./src/modules/*.js', './src/modules/**/*.js']
+        js: ['./node_modules/angular/angular.min.js', './src/modules/*.js', './src/modules/**/*.js']
     },
     bundle: './src/lib/app.bundle.js',
     ignored: '*.specs.js'
