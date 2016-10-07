@@ -1,5 +1,6 @@
 # workshop_angular
 MW37100
+kangax.github.io
 
 file.js (exemple de nodejs)
 
@@ -33,3 +34,6 @@ IIFE & RMP
 
 #Directives  
 Restrict --> Element / Attribute only !
+
+#gulp
+gulp module -n nom_module

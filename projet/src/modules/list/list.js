@@ -11,14 +11,22 @@
                 return 'modules/list/list.html' },
             restrict: 'E',
             scope: {
-                mainTitle: '=display'
+                mainTitle: '=display',
+                callback: '&'
             },
             bindToController: true,
             controllerAs: '$ctrl',
-            controller: function($scope, $element, $attrs, $transclude, Users) {
+            controller: function($rootScope, $element, $attrs, $transclude, Users) {
                 this.title = 'List of Users';
-                this.mainTitle += '*****';
+
+                //console.log(this.callback);
+
                 this.users = Users.getData().users;
+
+                this.clickFn = function(item) {
+                    $rootScope.$emit('USER_SELECTED', item);
+                    //this.callback({user:item})
+                }
 
 
             }

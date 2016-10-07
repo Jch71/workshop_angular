@@ -17,8 +17,9 @@
                 console.log('digest', Math.random());
             })
         })
-        .config(function() {
+        .config(function($compileProvider) {
             console.log('app-wrap', 'CONFIG')
+                //$compileProvider.debugInfoEnabled(false);
         })
 
 

@@ -13,8 +13,16 @@
 
     function AppCtrl($scope) {
 
-        this.title = " Amazing !!";
-        this.name = "Orsys";
+        this.title = " Amazing !!"
+
+        $scope.$on('USER_SELECTED', function($event, data) {
+            console.log($event, data);
+        })
+
+        this.userSelect = function(arg) {
+            console.warn(arg);
+        }
+
 
     }
 

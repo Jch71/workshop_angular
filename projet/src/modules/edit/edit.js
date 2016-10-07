@@ -1,6 +1,6 @@
 (function() {
 
-    var moduleDependencies = ['edit.services', 'edit.controllers', 'edit.routes'];
+    var moduleDependencies = [];
 
     angular.module('edit', moduleDependencies)
         .directive('editComponent', [editComponentDirective])
@@ -10,10 +10,17 @@
             templateUrl: function() {
                 return 'modules/edit/edit.html'
             },
-            scope: true,
             restrict: 'E',
-            constrollerAs: '$ctrl',
-            controller: function($scope, $element, $attrs, $transclude, Users) {
+            scope: {},
+            bindToController: true,
+            controllerAs: '$ctrl',
+            controller: function($rootScope, $element, $attrs, $transclude, Users) {
+                var vm = this;
+
+                $rootScope.$on('USER_SELECTED', function($event, data) {
+                    console.info($event, data, 'From Edit sans emebter le controller sup');
+                    vm.user = data;
+                })
 
 
             }

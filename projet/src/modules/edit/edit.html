@@ -1,16 +1,27 @@
 <div class="col-xs-6">
     <div class="panel panel-primary">
     	<div class="panel-title">
-            <h2>{{$ctrl.title}}-{{main.title}}</h2>
+            <h2>{{$ctrl.title}}</h2>
         </div>
         <div class="panel-body">
-			<form action="" method="POST" role="form">
+			<pre>
+        	{{
+        		userEdit | json
+        	}}
+        	</pre>
+			<form action="" name="userEdit">
 				<legend>Form title</legend>
 			
 				<div class="form-group">
-					<label for="">label</label>
+					<label for="">Name</label>
+
 					<input type="text" class="form-control" id=""
-						ng-model="user.name">
+						ng-model="$ctrl.user.name"
+
+						name="userName" ng-model-options="{ updateOn: 'blur' }" required letter-only>
+						{{$ctrl.user.name}}
+
+					<img ng-src="{{$ctrl.user.pic}}" alt="">
 				</div>
 			
 				
