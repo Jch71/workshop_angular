@@ -6,8 +6,8 @@
         <div class="panel-body">
 			<ul class="list-group">
 				<li class="list-group-item" ng-repeat="user in $ctrl.users track by $index" ng-click="$ctrl.clickFn(user)">
-					<h3>{{user.name}}<h3>
-                    <img ng-src="{{user.pic}}" ui-css-zoomable class="thumbnail" width="50" heigth="50">
+					<h3>{{::user.name}}<h3>
+                    <img ng-src="{{::user.pic}}" ui-css-zoomable class="thumbnail" width="50" heigth="50">
 				</li>
 			</ul>
 

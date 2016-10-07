@@ -8,7 +8,8 @@
     function listComponentDirective() {
         return {
             templateUrl: function() {
-                return 'modules/list/list.html' },
+                return 'modules/list/list.html'
+            },
             restrict: 'E',
             scope: {
                 mainTitle: '=display',
@@ -17,11 +18,17 @@
             bindToController: true,
             controllerAs: '$ctrl',
             controller: function($rootScope, $element, $attrs, $transclude, Users) {
+                var vm = this;
                 this.title = 'List of Users';
 
                 //console.log(this.callback);
 
-                this.users = Users.getData().users;
+                this.users = [];
+
+                Users.getData().then(function(data) {
+                    console.info(data)
+                    vm.users = data;
+                });
 
                 this.clickFn = function(item) {
                     $rootScope.$emit('USER_SELECTED', item);

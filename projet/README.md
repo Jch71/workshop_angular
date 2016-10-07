@@ -11,6 +11,15 @@ Chaque fichier js est un angular.module.
 
 Déterminer une structure (LIFT) qui supporte un worklow et un bon "build systeme"
 
+## Optimisation et outils
+
+* Utiliser les plugins : Batarang et Angular Watchers
+* Utiliser la syntaxe bind-once **{{::value}}* et [angular-bind-notifier](https://github.com/kasperlewau/angular-bind-notifier)
+* Utliser l'API des event angular (depuis $rootScope pour écnonomiser les propagation)
+
+
+> Penser à concevoir ses : **filtre ,parsers, validators et fomatters.**
+
 ## Conception avec les directives
 
 **BluePrint des directivess**

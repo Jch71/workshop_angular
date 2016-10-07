@@ -18,13 +18,13 @@
                 }
 
                 ngModel.$formatters.push(function(value) {
-                    if (!value) return;
-                    return value.toUpperCase()
+                	if(!value) return;
+                	return value.toUpperCase()
                 });
 
                 ngModel.$parsers.push(function(value) {
-                    if (!value) return;
-                    return value.toLowerCase()
+                	if(!value) return;
+                	return value.toLowerCase()
                 });
 
             }

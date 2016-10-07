@@ -1,5 +1,5 @@
 //"preinstall": "npm i -g gulp yo bower http-server karma uglifyjs uglify jshint jscs browserify",
-
+        
 var gulp = require('gulp');
 module.exports = gulp;
 
@@ -20,15 +20,15 @@ var ngAnnotate = require('gulp-ng-annotate');
 
 var CONFIG = {
     modules: {
-        path: './src/modules/',
+        path: './src/components/',
         templates: 'templates/module/*',
         baseName: '/module.*',
     },
     paths: {
-        js: ['./node_modules/angular/angular.min.js', './src/modules/*.js', './src/modules/**/*.js']
+        js: ['./node_modules/angular/angular.min.js','./src/components/**/*.js']
     },
-    bundle: './src/lib/app.bundle.js',
-    ignored: '*.specs.js'
+    bundle:'./src/lib/app.bundle.js',
+    ignored:'*.spec.js'
 };
 
 //gulp mmodule -n MODULE_NAME
@@ -73,7 +73,6 @@ gulp.task('bundle', ['clean'], function() {
         .pipe(size())
         .on('end', function() {
             gutil.log('Done!');
-            //sh.exec('npm r');
         });
 });
 
