@@ -19,7 +19,7 @@ module.exports = function(config) {
         ],
         // Fichiers (pattern) à exclure du chargement lors des test
         exclude: [
-            './src/components/_block.js'
+            './src/modules/_block.js'
         ],
 
 
