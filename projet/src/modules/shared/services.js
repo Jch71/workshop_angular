@@ -43,16 +43,15 @@
 
             function Users() {
 
+                this.collection = [];
+
                 this.getData = function() {
 
                     var defer = $q.defer()
 
-                    this.collection = []
-
                     $http.get('http://fakebackand.com').then(function(response) {
                         this.collection = response.data
                         defer.resolve(this.collection);
-
                     })
 
                     return defer.promise;
