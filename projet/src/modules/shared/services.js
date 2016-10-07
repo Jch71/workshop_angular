@@ -14,8 +14,10 @@
         function UsersFactory($http) {
 
             function Users() {
+                console.info($http);
+                
                 this.getData = function() {
-                	console.log($http)
+                	
                     return {
                         "users": [
                             { "id": 1, "name": "renaud", "pic": "http://robohash.org/renaud" },

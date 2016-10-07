@@ -6,7 +6,7 @@
             console.log('edit.routes', 'RUN')
         })
         .config(function() {
-            console.log('edit.routes', 'RUN')
+            console.log('edit.routes', 'CONFIG')
         })
 
     .config([configFn]);

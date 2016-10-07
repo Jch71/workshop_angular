@@ -7,12 +7,11 @@
             console.log('edit.controllers', 'RUN')
         })
         .config(function() {
-            console.log('edit.controllers', 'RUN')
+            console.log('edit.controllers', 'CONFIG')
         })
+        .controller('editCtrl', function($scope) {
 
-    .controller('editCtrl', function($scope) {
-
-    })
+        })
 
 
 })();

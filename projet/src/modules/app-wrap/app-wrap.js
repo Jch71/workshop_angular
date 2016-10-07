@@ -7,18 +7,18 @@
         'shared',
         'app-wrap.services',
         'app-wrap.controllers',
-        'app-wrap.routes',
+        'app-wrap.routes'
     ];
 
     angular.module('app-wrap', moduleDependencies)
         .run(function($rootScope) {
-            console.log('app-wrap.module', 'RUN')
+            console.log('app-wrap', 'RUN')
             $rootScope.$watch(function() {
-                console.log('digest', Math.random(1));
+                console.log('digest', Math.random());
             })
         })
         .config(function() {
-            console.log('app-wrap.module', 'CONFIG')
+            console.log('app-wrap', 'CONFIG')
         })
 
 

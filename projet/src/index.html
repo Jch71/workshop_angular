@@ -8,7 +8,7 @@
     <title>NgApp</title>
     <style>
     img {
-        transition: transform .3s ease;
+        transition: transform .3s ease!important;
     }
     
     img.zoom {
@@ -17,11 +17,18 @@
     </style>
 </head>
 
-<body ng-app="app-wrap" ng-init="message='Message'">
+<body ng-app="app-wrap"  ng-controller="AppCtrl as main">
     <ui-header></ui-header>
-    <list-component>
-    </list-component>
-    <edit></edit>
+
+    <h1>{{main.name}}</h1>
+    <h1>{{main.title}}</h1>
+
+    <ui-button level="1" icon="ok"></ui-button>
+
+    <list-component display="main.title"></list-component>
+    <edit-component></edit-component>
+
+
     <script src="lib/app.bundle.js"></script>
 </body>
 

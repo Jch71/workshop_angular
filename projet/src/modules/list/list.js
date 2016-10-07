@@ -8,14 +8,19 @@
     function listComponentDirective() {
         return {
             templateUrl: function() {
-                return 'modules/list/list.html'
-            },
+                return 'modules/list/list.html' },
             restrict: 'E',
-            scope: true,
+            scope: {
+                mainTitle: '=display'
+            },
+            bindToController: true,
+            controllerAs: '$ctrl',
             controller: function($scope, $element, $attrs, $transclude, Users) {
-                console.log(Users);
-                $scope.title = 'List of Users';
-                $scope.users = Users.getData().users;
+                this.title = 'List of Users';
+                this.mainTitle += '*****';
+                this.users = Users.getData().users;
+
+
             }
         };
     }

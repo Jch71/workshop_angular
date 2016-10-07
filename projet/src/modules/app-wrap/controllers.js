@@ -9,10 +9,14 @@
         .config(function() {
             console.log('app-wrap.controllers', 'CONFIG')
         })
+        .controller('AppCtrl', AppCtrl)
 
-    .controller('app-wrapCtrl', function($scope) {
+    function AppCtrl($scope) {
 
-    })
+        this.title = " Amazing !!";
+        this.name = "Orsys";
+
+    }
 
 
 })();
